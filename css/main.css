@@ -18,7 +18,7 @@ body {
 
 .container{
 	max-width: 1200px;
-	margin: 0 20px;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -60,11 +60,10 @@ header {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    align-items: center;
 }
 
 header h1 {
-	float: left;
+	float: left; 
 	margin: 0;
 	padding-top: 38px;
     border-bottom: 3px solid #77a466;
@@ -80,14 +79,18 @@ header nav {
 header nav ul {
 	margin: 0;
 	padding: 0;
+
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
 	padding: 10px;
-	display: flex;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -141,6 +144,10 @@ header nav ul li a{
 	padding: 10px 0;
 }
 
+.section-three {
+    border-bottom: 3px solid #eee;
+}
+
 /***** .section-two {
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
@@ -174,7 +181,6 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	height: 50px;
-	border-top: 3px solid #eee;
 	margin: 0 auto;
 	clear: both;
 	text-align: center;
@@ -187,4 +193,70 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/***** TABLET BREAKPOINT *****/
+
+@media all and (min-width: 768px) {
+    
+    header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+    
+    .bottom-section {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+    .section-one, .section-two, .section-three {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        border-top: none;
+        height: auto;
+    }
+    
+    .section-one {
+        margin-top: -9px;
+    }
+    
+    .section-two {
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;;
+    }
+    
+    .section-three {
+        border-bottom: none;
+    }
+    footer {
+        border-top: none;
+    }
+}
+
+/***** DESKTOP BREAKPOINT *****/
+
+@media all and (min-width: 1200px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    
+    header h1{
+        border-bottom: none;
+        padding: 38px 0;
+    }
+    
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+  }
+
 }
